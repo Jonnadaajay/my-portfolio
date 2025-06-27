@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonnada Ajay - Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #0a9396;
+      --secondary-color: #005f73;
+      --accent-color: #94d2bd;
+      --background-color: #e3f2fd;
+      --card-bg: #ffffff;
+      --card-alt-bg: #f1f8e9;
+      --text-color: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      --heading1-color: #023e8a;
+      --heading2-color: #0077b6;
+      --heading3-color: #0096c7;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0a9396, #94d2bd);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 960px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    section:nth-of-type(odd) {
+      background: var(--card-bg);
+    }
+
+    section:nth-of-type(even) {
+      background: var(--card-alt-bg);
+    }
+
+    h1 {
+      color: var(--heading1-color);
+    }
+
+    h2 {
+      color: var(--heading2-color);
+    }
+
+    h3 {
+      color: var(--heading3-color);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #e0f7fa;
+      color: #004d40;
+      font-weight: bold;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cert-list li, .intern-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .cert-list button, .intern-list button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+      transition: transform 0.2s ease;
+    }
+
+    .cert-list button:hover, .intern-list button:hover {
+      transform: scale(1.2);
+    }
+
+    .cert-preview, .intern-preview {
+      display: none;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .cert-preview img, .intern-preview img {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:/Users/jonna/Pictures/Saved Pictures/image.jpg" alt="Ajay's Profile Picture">
+    <h1>Jonnada Ajay</h1>
+    <p>Computer Science Student | Developer | AI Enthusiast</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate and driven computer science student with a keen interest in technology, artificial intelligence, and problem-solving. My academic journey has been focused on learning cutting-edge tools and technologies to create meaningful software applications. I thrive in team environments and excel at communicating complex ideas clearly. My passion for learning and applying knowledge has enabled me to complete several internships and certifications across domains like AI, ML, web development, and cloud computing.</p>
+    <p>My goal is to contribute to innovative projects that push boundaries and create impact. I believe in continuous learning, adaptability, and a hands-on approach to technology. Whether it's developing a website or experimenting with machine learning models, I bring focus, creativity, and determination to every challenge I take on.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <h3>Technical Skills</h3>
+    <ul>
+      <li>Python – Strong in core concepts and practical applications</li>
+      <li>Java – OOPs and application development fundamentals</li>
+      <li>C – Solid understanding of programming logic and structure</li>
+      <li>HTML, CSS, JavaScript – Frontend development for responsive websites</li>
+      <li>Web Development – Full-cycle static website creation</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Excellent verbal and written communication</li>
+      <li>Time management and adaptability</li>
+      <li>Team collaboration and leadership</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Portfolio Website:</strong> Developed this responsive personal website using HTML, CSS, and JavaScript. Designed for clarity and accessibility, it showcases my certifications, experience, and technical strengths in a professional layout.</li>
+    </ul>
+  </section>
+
+  <section id="internships">
+    <h2>Internships</h2>
+    <ul class="intern-list">
+      <li><strong>Ulearn Pvt Ltd</strong> (May–June 2024): Basics of AI & ML <button onclick="toggleCert('ulearn')">📜</button></li>
+      <div id="ulearn" class="intern-preview"><img src="certificates/ulearn_internship.jpg" alt="Ulearn Internship Certificate"></div>
+
+      <li><strong>Vidhrutha Solutions</strong> (Dec 2024 – April 2025): AI/ML Internship with Python applications <button onclick="toggleCert('vidhrutha')">🧾</button></li>
+      <div id="vidhrutha" class="intern-preview"><img src="C:/Users/jonna/Pictures/certificates/Ulearn.jpg" alt="Vidhrutha Internship Certificate"></div>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>Infosys AWS Certificate <button onclick="toggleCert('aws')">👁️</button></li>
+      <div id="aws" class="cert-preview"><img src="C:/Users/jonna/Pictures/certificates/Infosys AWS certificate.jpg" alt="AWS Certificate"></div>
+
+      <li>Infosys Java for Beginners <button onclick="toggleCert('java')">👁️</button></li>
+      <div id="java" class="cert-preview"><img src="C:/Users/jonna/Pictures/certificates/Infosys Java for begginers certificate.jpg" alt="Java Certificate"></div>
+
+      <li>HTML5 Certification <button onclick="toggleCert('html5')">👁️</button></li>
+      <div id="html5" class="cert-preview"><img src="C:/Users/jonna/Pictures/certificates/it specialist.jpg" alt="HTML5 Certificate"></div>
+
+      <li>MERN Stack Certificate <button onclick="toggleCert('mern')">👁️</button></li>
+      <div id="mern" class="cert-preview"><img src="C:/Users/jonna/Pictures/certificates/mernstack.jpg" alt="MERN Stack Certificate"></div>
+
+      <li>Oracle Java Certificate <button onclick="toggleCert('oraclejava')">👁️</button></li>
+      <div id="oraclejava" class="cert-preview"><img src="C:/Users/jonna/Pictures/certificates/Oracle Java certificate.jpg" alt="Oracle Java Certificate"></div>
+
+      <li>Oracle DBMS Certificate <button onclick="toggleCert('dbms')">👁️</button></li>
+      <div id="dbms" class="cert-preview"><img src="C:/Users/jonna/Pictures/certificates/oracle DBMS certificate.jpg" alt="DBMS Certificate"></div>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Sc. Computer Science</strong>, Aditya Degree College (2022–2025) – CGPA: 7.64. Gained core academic knowledge and participated in several co-curricular tech activities.</li>
+      <li><strong>Intermediate (MPC)</strong>,Intermediate (MPC)</strong>, Sri Chaitanya Junior College – 62%. Focused on analytical subjects including Mathematics, Physics, and Chemistry.</li>
+      <li><strong>SSC</strong>,  Z.P.P. High School – 97%. Achieved academic excellence and laid strong foundational skills.</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages</h2>
+    <ul>
+      <li>English – Professional proficiency</li>
+      <li>Telugu – Native speaker</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:jonnadaajay9390@gmail.com">jonnadaajay9390@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/jonnada-ajay-63947b27" target="_blank">https://www.linkedin.com/in/jonnada-ajay-63947b27</a></p>
+    <p>Mobile: <a href="tel:+919390909395">+91 93909 09395</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jonnada Ajay. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleCert(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
